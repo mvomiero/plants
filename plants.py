@@ -7,8 +7,8 @@ occurrence_base_url = "https://api.gbif.org/v1/occurrence/search"
 
 # Define your query parameters
 params = {
-    "scientificName": "Tilia cordata",  # Replace with the plant species you want to search for
-    #"scientificName": "Cistus creticus",  # Replace with the plant species you want to search for
+    #"scientificName": "Tilia cordata",  # Replace with the plant species you want to search for
+    "scientificName": "Cistus creticus",  # Replace with the plant species you want to search for
     "limit": 100,  # You can adjust the limit to control the number of results per request
     "offset": 0  # Start with an offset of 0 to retrieve the first page of results
 }
