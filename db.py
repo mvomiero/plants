@@ -1,10 +1,24 @@
-#!/usr/bin/env python3
+import psycopg2
 
-import pandas as pd
+# Connect to the PostgreSQL database
+conn = psycopg2.connect(
+    host="localhost",
+    database="plants",
+    user="marco",
+    #password="your_password"  # Replace with your actual password
+)
 
-# Specify tab ('\t') as the delimiter
-df = pd.read_csv("0039102-231002084531237.csv", delimiter='\t')
+# Create a cursor
+cur = conn.cursor()
 
-print(df.head())  # Displays the first few rows
-print(df.columns)  # Displays the field names (headers)
+# Execute a query
+cur.execute("SELECT * FROM plantnet_observations LIMIT 10;")
+rows = cur.fetchall()
 
+# Print the results
+for row in rows:
+    print(row)
+
+# Close the cursor and connection
+cur.close()
+conn.close()
