@@ -4,6 +4,10 @@
 * [PlantNet Open Data](https://plantnet.org/open-data/)
 * [PlantNet Observations Dataset](https://www.gbif.org/dataset/7a3679ef-5582-4aaa-81f0-8c2545cafc81#description)  *GBIF registation section contains information about how to use the API*
 
+## Sandbox
+* [OpenWeather Statistic Data](https://openweathermap.org/api/statistics-api#:~:text=Statistical%20Weather%20Data%20API%20allows,or%20for%20the%20entire%20year.)
+
+
 ## 11.11.23 Request to ChatGPT
 so I have an ongoing project I want to develop. The project is the following: I want to develop a platform that combines plant data with climatic and geografic data. The process should be the following: I take the data of plantnet, wich is a plant recognition app, and epecially I use their data to see where are located  the obseravations o a specific plant in the world (coordinates). So for example I do that for a single plant. Then, thanks to an API i want to get the climatic data of the different locations of the plant. Then, with some machine learning, I want to know what are the climatic conditions where this plant successfully grows. 
 
