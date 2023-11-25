@@ -5,7 +5,7 @@ conn = psycopg2.connect(
     host="localhost",
     database="plants",
     user="marco",
-    password="your_password"  # Replace with your actual password
+    #password="your_password"  # Replace with your actual password
 )
 
 # Create a cursor
