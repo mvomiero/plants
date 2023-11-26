@@ -34,7 +34,6 @@ conn.commit()
 # Create a new table in the same database to store plant observations and climate data
 create_table_query = """
 CREATE TABLE IF NOT EXISTS plant_climate_data (
-    observation_id SERIAL PRIMARY KEY,
     species VARCHAR(100),  -- Column to store species
     january_climate JSONB,  -- Fields for January climate data
     february_climate JSONB,  -- Fields for February climate data
@@ -66,6 +65,7 @@ for observation in observations:
     longitude = observation['decimallongitude']
 
     # Get climatic data for the observation's location
+    print("call to get_climatic_data")
     climate_data = get_climatic_data_for_location(latitude, longitude)
     print("climatic data retrieved")
 

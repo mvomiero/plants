@@ -2,6 +2,10 @@ from dotenv import load_dotenv
 import os
 import json
 import time
+from colorama import Fore, Back, Style, init
+
+# Initialize colorama
+init()
 
 import requests
 
@@ -18,6 +22,7 @@ def display_progress():
     print("Climatic data retrieval complete!")
 
 def get_climatic_data_for_location(latitude, longitude):
+    print(f"{Fore.RED}get_climatic_data_for_location.{Style.RESET_ALL}")
     # display_progress()
     all_month_data = []
 
@@ -43,9 +48,9 @@ def get_climatic_data_for_location(latitude, longitude):
     return all_month_data
 
 
-# Example usage:
-latitude = 52.52  # Replace with your desired latitude
-longitude = 13.4  # Replace with your desired longitude
+# # Example usage:
+# latitude = 52.52  # Replace with your desired latitude
+# longitude = 13.4  # Replace with your desired longitude
 
-data_for_location = get_climatic_data_for_location(latitude, longitude)
-print(data_for_location)
+# data_for_location = get_climatic_data_for_location(latitude, longitude)
+# print(data_for_location)
