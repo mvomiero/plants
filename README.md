@@ -1,3 +1,4 @@
+![Project Cover](ttps://github.com/mvomiero/plants/blob/main/assets/cover.jpeg)
 # Plants project 🌴
 
 ## Next step:
