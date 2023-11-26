@@ -1,4 +1,4 @@
-![Project Cover](ttps://github.com/mvomiero/plants/blob/main/assets/cover.jpeg)
+![Project Cover](https://github.com/mvomiero/plants/blob/main/assets/cover.jpeg)
 # Plants project 🌴
 
 ## Next step:
