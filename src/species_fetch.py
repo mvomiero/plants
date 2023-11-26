@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import extras
 import requests
 import json
-from clima_request import get_climatic_data_for_location
+from src.clima_request import get_climatic_data_for_location
 
 def connect_to_database():
     conn = psycopg2.connect(

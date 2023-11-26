@@ -1,12 +1,33 @@
 # Plants project 🌴
 
-## Whiteboard
+## Next step:
+extract climatic data for more then one instance and see if is possible to peform data operations (since the climatic data is stored raw in json)
+
+## Open topics:
+* data pipelines
+* climatic data saved in json in the database or better to parse it or extract the fields?
+* reference in the climatic table to plant observation database?
+
+
+## Journal
+
+* __11.11.23 - started the project__   
+bla bla
+* __25/26.11.23 - project structure and table in database for climatic data__  
+structure with source code in src/, main.py as entrypoint, config.py for keys, setting the venv, Makefile, structure of the readme, setting a table in the database for the observations to store the climatic data (responses saved as Json), added a makefile. 
+__next to do:__ extract climatic data for more then one instance and see if is possible to peform data operations (since the climatic data is stored raw in json)
+
+## Miscellaneous
+* [Misc.](https://github.com/mvomiero/plants/blob/main/Guides/Miscellaneous.md)
+
+
+## Data and APIs
 * [PlantNet Open Data](https://plantnet.org/open-data/)
 * [PlantNet Observations Dataset](https://www.gbif.org/dataset/7a3679ef-5582-4aaa-81f0-8c2545cafc81#description)  *GBIF registation section contains information about how to use the API*
-
-## Sandbox
 * [OpenWeather Statistic Data](https://openweathermap.org/api/statistics-api#:~:text=Statistical%20Weather%20Data%20API%20allows,or%20for%20the%20entire%20year.)
 
+## PostgreSQL Database
+* [PosgreSQL](https://github.com/mvomiero/plants/blob/main/Guides/PostgreSQL.md)
 
 ## 11.11.23 Request to ChatGPT
 so I have an ongoing project I want to develop. The project is the following: I want to develop a platform that combines plant data with climatic and geografic data. The process should be the following: I take the data of plantnet, wich is a plant recognition app, and epecially I use their data to see where are located  the obseravations o a specific plant in the world (coordinates). So for example I do that for a single plant. Then, thanks to an API i want to get the climatic data of the different locations of the plant. Then, with some machine learning, I want to know what are the climatic conditions where this plant successfully grows. 

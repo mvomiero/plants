@@ -1,0 +1,13 @@
+start_db:
+	pg_ctl -D /opt/homebrew/var/postgresql@14 start
+
+stop_db:
+	pg_ctl -D /opt/homebrew/var/postgresql@14 stop
+
+# venv commands seem not to work here
+
+stop_venv:
+	deactivate
+
+start_venv:
+	. venv/bin/activate
