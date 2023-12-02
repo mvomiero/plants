@@ -16,6 +16,8 @@ extract climatic data for more then one instance and see if is possible to pefor
 bla bla
 * __25/26.11.23 - project structure and table in database for climatic data__  
 structure with source code in src/, main.py as entrypoint, config.py for keys, setting the venv, Makefile, structure of the readme, setting a table in the database for the observations to store the climatic data (responses saved as Json), added a makefile. 
+* __02.12.23__  
+added a function for a scatter plot of with the observation temperature value for one month (for example may, about 15 observations)
 __next to do:__ extract climatic data for more then one instance and see if is possible to peform data operations (since the climatic data is stored raw in json)
 
 ## Miscellaneous
