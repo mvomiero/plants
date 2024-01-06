@@ -11,3 +11,6 @@ stop_venv:
 
 start_venv:
 	. venv/bin/activate
+
+run_background:
+	nohup python3 main.py

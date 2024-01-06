@@ -53,7 +53,7 @@ def create_new_table(cursor, conn):
 
 def fill_table_with_data(cursor, conn, observations):
     # Insert observation data with corresponding climate data into the new table
-    commit_limit = 15  # Set the limit to 1 for testing the first observation
+    commit_limit = 2  # Set the limit to 1 for testing the first observation
     commit_count = 0   # Initialize a counter to track the number of commits
 
     for observation in observations:
