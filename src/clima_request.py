@@ -13,17 +13,8 @@ load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 
-# Function to display a progress indication
-def display_progress():
-    print("Retrieving climatic data for each month:")
-    for i in range(10):
-        time.sleep(0.5)  # Simulating some processing time
-        print(f"Processing step {i+1}...")
-    print("Climatic data retrieval complete!")
-
 def get_climatic_data_for_location(latitude, longitude):
-    print(f"{Fore.RED}get_climatic_data_for_location.{Style.RESET_ALL}")
-    # display_progress()
+    #print(f"{Fore.RED}get_climatic_data_for_location.{Style.RESET_ALL}")
     all_month_data = []
 
     for month in range(1, 13):
@@ -43,7 +34,7 @@ def get_climatic_data_for_location(latitude, longitude):
         else:
             print ("error!")
             #print(f'Error for month {month}: {response.status_code}, {response.text}')
-        print("month %d retrieved" % month)
+        #print("month %d retrieved" % month)
 
     return all_month_data
 

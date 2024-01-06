@@ -53,7 +53,7 @@ def create_new_table(cursor, conn):
 
 def fill_table_with_data(cursor, conn, observations):
     # Insert observation data with corresponding climate data into the new table
-    commit_limit = 2  # Set the limit to 1 for testing the first observation
+    commit_limit = 3  # Set the limit to 1 for testing the first observation
     commit_count = 0   # Initialize a counter to track the number of commits
 
     for observation in observations:
@@ -64,9 +64,9 @@ def fill_table_with_data(cursor, conn, observations):
         longitude = observation['decimallongitude']
 
         # Get climatic data for the observation's location
-        print("call to get_climatic_data")
+        #print("call to get_climatic_data")
         climate_data = get_climatic_data_for_location(latitude, longitude)
-        print("climatic data retrieved")
+        print(f"climatic data for instance {commit_count} retrieved")
 
         # Build the INSERT query for the new table with observation and climate data for all months
         insert_query = """

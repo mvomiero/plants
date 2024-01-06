@@ -5,7 +5,7 @@ from src.scatter_plot import main as scatter_plot
 
 # Call the main function from species_fetch.py
 def main():
-    #print ("fetching species and retrieving climatic data...")
+    print ("fetching species and retrieving climatic data...")
     species_fetch()
     scatter_plot()
     print("succsessfully finished!")
