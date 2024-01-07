@@ -14,3 +14,10 @@ start_venv:
 
 run_background:
 	nohup python3 main.py
+	
+
+docker_build:
+	make -C Docker build
+
+docker_run:
+	make -C Docker run
