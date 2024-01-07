@@ -1,3 +1,5 @@
+run:
+	python3 main.py
 start_db:
 	pg_ctl -D /opt/homebrew/var/postgresql@14 start
 

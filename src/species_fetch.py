@@ -4,6 +4,14 @@ import requests
 import json
 from src.clima_request import get_climatic_data_for_location
 
+def connect_to_database():
+    conn = psycopg2.connect(
+        host="localhost",
+        database="plants",
+        user="marco",
+        # password="your_password"  # Replace with your actual password
+    )
+    return conn
 
 def fetch_observations(cursor):
     query = """
