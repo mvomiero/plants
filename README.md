@@ -2,9 +2,11 @@
 # Plants project 🌴
 
 ## Next step:
-extract climatic data for more then one instance and see if is possible to peform data operations (since the climatic data is stored raw in json)
+* new table linked to each observation with parsed climatic data, once it works for one, it has to be scheduled a cron job that works on a server.
+* short term goal: having the climatic table for each observation and retrive and compare climatic data for example for the same species
 
 ## Open topics:
+(14.01.24 - a bit outdated, have to be refined)
 * data pipelines
 * climatic data saved in json in the database or better to parse it or extract the fields?
 * reference in the climatic table to plant observation database?
@@ -12,13 +14,19 @@ extract climatic data for more then one instance and see if is possible to pefor
 
 ## Journal
 
-* __11.11.23 - started the project__   
-bla bla
-* __25/26.11.23 - project structure and table in database for climatic data__  
-structure with source code in src/, main.py as entrypoint, config.py for keys, setting the venv, Makefile, structure of the readme, setting a table in the database for the observations to store the climatic data (responses saved as Json), added a makefile. 
+* __14.01.24__  
+__Decision: a new table with the parsed climaic data will be linked to every instance of the observation table. That is to be able to better analyze the data.__  
+Finally managed to create a docker-compose with two containers for the db and pg admin web interface to have a GUI to access the database. Created the corresponding guide and adapted the Makefiles for semplicity of operations (for example starting the containers).
+
+* __06.01.24__  
+Retrieved multiple instances and plotted on the graph the temperature for the different months. Decided that I wanted to store the climatic data in a table linked to the database of observations. Decided then that I want to move the database in a container for semplicity and to organize the retriving of climatic information with a cron job on a server in the future. Tried to containerize but didn't manage.
+
 * __02.12.23__  
 added a function for a scatter plot of with the observation temperature value for one month (for example may, about 15 observations)
-__next to do:__ extract climatic data for more then one instance and see if is possible to peform data operations (since the climatic data is stored raw in json)
+* __25/26.11.23 - project structure and table in database for climatic data__  
+structure with source code in src/, main.py as entrypoint, config.py for keys, setting the venv, Makefile, structure of the readme, setting a table in the database for the observations to store the climatic data (responses saved as Json), added a makefile. 
+* __11.11.23 - started the project__   
+bla bla
 
 ## Miscellaneous
 * [Misc.](https://github.com/mvomiero/plants/blob/main/Guides/Miscellaneous.md)

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    container_name: my-postgres-container
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: my-pgadmin-container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: your_email@example.com
+      PGADMIN_DEFAULT_PASSWORD: your_pgadmin_password
+    ports:
+      - "5050:80"

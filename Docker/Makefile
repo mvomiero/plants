@@ -1,9 +1,5 @@
-build:
-# just to build the image
-	docker build -t postgres-database-image .
+up:
+	docker-compose up -d
 
-run:
-	docker run -d --name postgres-database-container -p 5432:5432 --env-file ../.env postgres-database-image
-
-
-
+down:
+	docker-compose down
