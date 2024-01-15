@@ -1,11 +1,7 @@
-start_db:
-	pg_ctl -D /opt/homebrew/var/postgresql@14 start
-
-stop_db:
-	pg_ctl -D /opt/homebrew/var/postgresql@14 stop
+run:
+	python3 main.py
 
 # venv commands seem not to work here
-
 stop_venv:
 	deactivate
 
@@ -14,3 +10,10 @@ start_venv:
 
 run_background:
 	nohup python3 main.py
+	
+
+up:
+	make -C Docker up
+
+down:
+	make -C Docker down
