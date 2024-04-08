@@ -4,3 +4,4 @@ venv/
 nohup.out
 src/__pycache__/
 postgres-data/
+keys/plantsKey.pem
