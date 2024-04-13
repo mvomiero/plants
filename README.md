@@ -1,18 +1,31 @@
 ![Project Cover](https://github.com/mvomiero/plants/blob/main/assets/cover.jpeg)
 # Plants project 🌴
 
-## Next step:
-* new table linked to each observation with parsed climatic data, once it works for one, it has to be scheduled a cron job that works on a server.
-* short term goal: having the climatic table for each observation and retrive and compare climatic data for example for the same species
+## Next milestone:
+web app with interactive graphs and dashboard about the climatic properties of different occurencies of a plant species
+
+## Next steps:
+* decide data organization: sql or bucket?
+* set Apache Airflow to schedule the workflow to retrieve the climatic data for all the observations to the API (since it is limited to 500 request per day)
+* develop a GUI and a web service to create a sort of web application that allows to visualize the collected data. Possibilities could be:
+    * Plotly Dash (Python) - free service
+    * Tableau online or server
+    * Amazon quickSight
+    * Power BI
+
+
 
 ## Open topics:
-(14.01.24 - a bit outdated, have to be refined)
+* sql database ond aws rds instance or aws bucket? what is the best data organization
 * data pipelines
 * climatic data saved in json in the database or better to parse it or extract the fields?
 * reference in the climatic table to plant observation database?
 
 
 ## Journal
+
+* __1.04-13.04.24__  
+Developed on aws a ec2 compunting instance running ubuntu connected to a postgresql database hosted on a aws rds instance. Managed to connect to the database trough cli from my local machine (database is not public, hosted in a private subnet of the ex2 instance)
 
 * __14.01.24__  
 __Decision: a new table with the parsed climaic data will be linked to every instance of the observation table. That is to be able to better analyze the data.__  
@@ -39,6 +52,9 @@ bla bla
 
 ## PostgreSQL Database
 * [PosgreSQL](https://github.com/mvomiero/plants/blob/main/Guides/PostgreSQL.md)
+
+## setting an aws RDS instances and connect to it
+* [PosgreSQL](https://github.com/mvomiero/plants/blob/main/Guides/aws_rds.md)
 
 ## 11.11.23 Request to ChatGPT
 so I have an ongoing project I want to develop. The project is the following: I want to develop a platform that combines plant data with climatic and geografic data. The process should be the following: I take the data of plantnet, wich is a plant recognition app, and epecially I use their data to see where are located  the obseravations o a specific plant in the world (coordinates). So for example I do that for a single plant. Then, thanks to an API i want to get the climatic data of the different locations of the plant. Then, with some machine learning, I want to know what are the climatic conditions where this plant successfully grows. 
