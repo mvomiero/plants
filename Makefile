@@ -17,3 +17,6 @@ up:
 
 down:
 	make -C Docker down
+
+start_db:
+	brew services start postgresql
